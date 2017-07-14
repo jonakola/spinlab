@@ -1,0 +1,8 @@
+steps:
+  - name: "gcr.io/cloud-builders/go"
+    args: ["install", "github.com/jonakola/spinlab"]
+    env: ["PROJECT_ROOT=github.com/jonakola/spinlab"]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "us.gcr.io/playground-158221/spinlab:$REVISION_ID", "-f", "Dockerfile", "."]
+images:
+  - "us.gcr.io/playground-158221/spinlab:$REVISION_ID"
