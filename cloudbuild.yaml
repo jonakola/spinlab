@@ -5,4 +5,4 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/playground-158221/spinlab:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "us.gcr.io/playground-158221/spinlab:$REVISION_ID"
+  - "gcr.io/playground-158221/spinlab:$REVISION_ID"
